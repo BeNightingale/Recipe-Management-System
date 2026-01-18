@@ -14,15 +14,18 @@ public class Controller {
 
     private RecipeService recipeService;
 
-    @PostMapping(value = "/recipe", consumes =  MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> addRecipe(@RequestBody String recipe) {
-        recipeService.updateRecipe(recipe);
-        return ResponseEntity.ok().build();
+    @PostMapping(value = "/recipe/new", consumes =  MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<RecipeService.Identifier> addRecipe(@RequestBody String recipe) {
+        final RecipeService.Identifier obj = recipeService.addRecipe(recipe);
+        return ResponseEntity.ok(obj);
     }
 
-    @GetMapping(value = "/recipe", produces =  MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Recipe> getRecipe() {
-        final List<Recipe> recipes = recipeService.getRecipes();
+    @GetMapping(value = "/recipe/{id}", produces =  MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Recipe> getRecipe(@PathVariable Integer id) {
+        final List<Recipe> recipes = recipeService.getRecipes(id);
+        if (recipes.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(recipes.getFirst());
     }
 }

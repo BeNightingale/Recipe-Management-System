@@ -2,27 +2,44 @@ package recipes;
 
 import com.google.gson.Gson;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.springframework.expression.spel.ast.Identifier;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 
 @Service
 @AllArgsConstructor
 public class RecipeService {
 
-    private static Recipe oldRecipe = new Recipe(
-            "Fresh Mint Tea",
-            "Light, aromatic and refreshing beverage, ...",
-            "boiled water, honey, fresh mint leaves",
-            "1) Boil water. 2) Pour boiling hot water into a mug. 3) Add fresh mint leaves. 4) Mix and let the mint leaves seep for 3-5 minutes. 5) Add honey and mix again."
-    );
+    private static Map<Integer, Recipe> recipeMap = new HashMap<>();
 
-    void updateRecipe(String recipe) {
+    Identifier addRecipe(String recipe) {
         final Gson gson = new Gson();
-        oldRecipe = gson.fromJson(recipe, Recipe.class);
+        Random r = new Random();
+        int id = r.nextInt(100000);
+        // int id = (int) Math.round(Math.random());
+        while (recipeMap.containsKey(id)) {
+            // id = (int) Math.round(Math.random());
+            id = r.nextInt(100000);
+        }
+        Recipe recipeToProcess = gson.fromJson(recipe, Recipe.class);
+        recipeMap.put(id, recipeToProcess);
+        return new Identifier(id);
     }
 
-    List<Recipe> getRecipes() {
-        return List.of(oldRecipe);
+    List<Recipe> getRecipes(Integer id) {
+        Recipe recipe = recipeMap.get(id);
+        if (recipe == null) {
+            return Collections.emptyList();
+        }
+        return List.of(recipe);
+    }
+
+    @AllArgsConstructor
+    @Getter
+    static
+    class Identifier {
+        long id;
     }
 }

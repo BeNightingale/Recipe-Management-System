@@ -9,19 +9,19 @@
 4[0m[0;34m =========|_|==============|___/=/_/_/_/
 6[0m[0;34m :: Spring Boot ::                (v3.2.0)
 [0m[0;34m
-∞[0m[0;34m2026-01-18T18:33:50.559+01:00  INFO 37357 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 21.0.8 with PID 37357 (started by beatakazmierczak in /Users/beatakazmierczak/IdeaProjects/Recipe Management System/Recipe Management System/task)
-∫[0m[0;34m2026-01-18T18:33:50.560+01:00  INFO 37357 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to 1 default profile: "default"
-ü[0m[0;34m2026-01-18T18:33:50.941+01:00  INFO 37357 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8881 (http)
-ê[0m[0;34m2026-01-18T18:33:50.945+01:00  INFO 37357 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ß[0m[0;34m2026-01-18T18:33:50.945+01:00  INFO 37357 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-©[0m[0;34m2026-01-18T18:33:50.961+01:00  INFO 37357 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-µ[0m[0;34m2026-01-18T18:33:50.961+01:00  INFO 37357 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 389 ms
-¨[0m[0;34m2026-01-18T18:33:51.138+01:00  INFO 37357 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-Æ[0m[0;34m2026-01-18T18:33:51.160+01:00  INFO 37357 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8881 (http) with context path ''
-æ[0m[0;34m2026-01-18T18:33:51.169+01:00  INFO 37357 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 0.715 seconds (process running for 0.977)
-¨[0;34m2026-01-18T18:33:51.278+01:00  INFO 37357 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-ü[0m[0;34m2026-01-18T18:33:51.278+01:00  INFO 37357 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-ó[0m[0;34m2026-01-18T18:33:51.279+01:00  INFO 37357 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+∞[0m[0;34m2026-01-18T18:50:01.938+01:00  INFO 38028 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 21.0.8 with PID 38028 (started by beatakazmierczak in /Users/beatakazmierczak/IdeaProjects/Recipe Management System/Recipe Management System/task)
+∫[0m[0;34m2026-01-18T18:50:01.939+01:00  INFO 38028 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to 1 default profile: "default"
+ü[0m[0;34m2026-01-18T18:50:02.312+01:00  INFO 38028 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8881 (http)
+ê[0m[0;34m2026-01-18T18:50:02.316+01:00  INFO 38028 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ß[0m[0;34m2026-01-18T18:50:02.316+01:00  INFO 38028 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+©[0m[0;34m2026-01-18T18:50:02.332+01:00  INFO 38028 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+µ[0m[0;34m2026-01-18T18:50:02.332+01:00  INFO 38028 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 380 ms
+¨[0m[0;34m2026-01-18T18:50:02.506+01:00  INFO 38028 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+Æ[0m[0;34m2026-01-18T18:50:02.530+01:00  INFO 38028 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8881 (http) with context path ''
+æ[0m[0;34m2026-01-18T18:50:02.539+01:00  INFO 38028 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 0.714 seconds (process running for 0.995)
+¨[0;34m2026-01-18T18:50:02.649+01:00  INFO 38028 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+ü[0m[0;34m2026-01-18T18:50:02.649+01:00  INFO 38028 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+ó[0m[0;34m2026-01-18T18:50:02.650+01:00  INFO 38028 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 [0m[1;31m
 Start test 2[0m
 [1;31m
