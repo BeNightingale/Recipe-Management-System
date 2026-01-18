@@ -12,16 +12,14 @@ import java.util.*;
 @AllArgsConstructor
 public class RecipeService {
 
-    private static Map<Integer, Recipe> recipeMap = new HashMap<>();
+    private static final Map<Integer, Recipe> recipeMap = new HashMap<>();
+    private static final Random random = new Random();
 
     Identifier addRecipe(String recipe) {
         final Gson gson = new Gson();
-        Random r = new Random();
-        int id = r.nextInt(100000);
-        // int id = (int) Math.round(Math.random());
+        int id = random.nextInt(100000);
         while (recipeMap.containsKey(id)) {
-            // id = (int) Math.round(Math.random());
-            id = r.nextInt(100000);
+            id = random.nextInt(100000);
         }
         Recipe recipeToProcess = gson.fromJson(recipe, Recipe.class);
         recipeMap.put(id, recipeToProcess);
@@ -38,8 +36,7 @@ public class RecipeService {
 
     @AllArgsConstructor
     @Getter
-    static
-    class Identifier {
+    public static class Identifier {
         long id;
     }
 }
